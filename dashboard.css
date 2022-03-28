@@ -1,0 +1,2648 @@
+/* Utility Class */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-item-center {
+    align-items: center;
+}
+
+.btn {
+    display: block;
+    border: none;
+}
+
+.color-white {
+    color: white;
+}
+
+.color-light-black {
+    color: #333333a9;
+}
+
+.red-star {
+    color: red;
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+
+table,
+td{
+    border-collapse: collapse;
+}
+
+i {
+    pointer-events: none !important;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(.97);
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    animation: fadeEffect .6s;
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Company, Employee and Employee Detail Tabs */
+.tab-section {
+    margin: 0px 20px;
+    border-bottom: 1px solid #ccc;
+    justify-content: space-between;
+}
+
+.tab {
+    list-style-type: none;
+}
+
+.tab li {
+    position: relative;
+    top: 0%;
+    overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.tab span.underline {
+    width: 100%;
+    height: 2px;
+    background-color: #7aac59;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    transform: translateX(100%);
+    transition: all 0.1s linear;
+}
+
+/* Create an active/current tablink class */
+.tab span.underline.active {
+    transform: translateX(0%);
+}
+
+/* Style the tab content */
+.tabcontent {
+    padding: 6px 12px;
+}
+
+/* Tab Content */
+.panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* Global Accordion */
+.accordion {
+    padding: 0px 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    transition: all 0.5s linear;
+    margin: 10px 0px;
+}
+
+.accordion:active{
+    transform: scale(1);
+}
+
+.accordion::before {
+    content: '\003E';
+    color: #777;
+    font-size: 2.2rem;
+    font-weight: bold;
+    float: left;
+    margin-right: 20px;
+}
+
+.active::before {
+    content: '\2228';
+    transform: skewX(2deg);
+}
+
+.color-green {
+    background-color: #7aac59;
+}
+
+.hidden {
+    display: none !important;
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.2;
+    font-family: "Roboto";
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Header Section */
+header {
+    background: rgb(109,157,78);
+    background: linear-gradient(204deg, rgba(109,157,78,1) 0%,
+    rgba(112,161,79,1) 57%, rgb(119, 171, 83) 100%);
+    justify-content: space-between;
+    padding: 10px 3% 10px 2%;
+}
+
+header .hambuger button{
+    flex-direction: column;
+    gap: 7px;
+    border: none;
+}
+
+header .hambuger div {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+}
+
+header .logo {
+    position: relative;
+    bottom: 7px;
+}
+
+header button {
+    background-color: transparent;
+    margin-right: 0px;
+    padding: 20px;
+}
+
+header button i {
+    font-size: 2.2rem;
+}
+
+/* Notification Section */
+.notification {
+    position: relative;
+    top: 0%;
+}
+
+.red-circle {
+    position: absolute;
+    top: 16px;
+    left: 34px;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 0, 0, 0.795);
+    border-radius: 100%;
+    border: 2px solid #fff;
+    pointer-events: none;
+}
+
+.notification-box {
+    position: absolute;
+    top: 80px;
+    right: -30px;
+    z-index: 10;
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px 3px gray;
+    border-radius: 4px;
+    display: none;
+}
+
+.notification-box-active{
+    display: block;
+}
+
+.notification-box::before {
+    content: "";
+    position: absolute;
+    top: -39px;
+    right: 44px;
+    border-top: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #fff;
+    pointer-events: none;
+}
+
+.notification-list {
+    list-style-type: none;
+    padding: 20px 0px;
+}
+
+.notification-list li {
+    padding: 10px;
+    text-align: center;
+}
+
+/* User Section */
+.user {
+    position: relative;
+    top: 0px;
+}
+
+.user-box {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    background-color: #fff;
+    padding: 10px;
+    display: none;
+    z-index: 20;
+}
+
+.user-box-active {
+    display: block;
+}
+
+.user-list {
+    list-style-type: none;
+}
+
+.user-list li {
+    padding: 10px;
+}
+
+.user-list li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.user-list i {
+    margin-right: 13px;
+}
+
+/* Activity Section */
+.activity-section {
+    width: 100%;
+    padding-top: 40px;
+    margin-bottom: 20px;
+    justify-content: end;
+}
+
+.activity-section > div{
+    justify-content: space-between;
+    width: 92%;
+}
+
+/* Filter Fields */
+
+.filter-fields select {
+    font-size: 1rem;
+    padding: 5px 20px;
+    border: none;
+}
+
+/* Different Buttons */
+.different-btns select {
+    font-size: 1rem;
+    padding: 5px 20px;
+    border: none;
+    margin-right: 10px;
+}
+
+.different-btns input {
+    font-size: 1rem;
+    padding: 5px 10px 5px 30px;
+    background-image: url(./images/search-icon.png);
+    background-repeat: no-repeat;
+    background-size: 23px;
+    background-position: 5px center;
+    border: 1px solid #333333a9;
+    border-radius: 3px;
+    outline: none;
+}
+
+.different-btns .btn-icon {
+    padding: 5px 8px;
+    margin: 0px 8px;
+    border-radius: 3px;
+    background-color: rgba(204, 204, 204, 0.781);
+}
+
+.change-btn-style {
+    color: #fff !important; 
+    background-color: #333 !important;
+}
+
+.different-btns .add-company-btn,
+.different-btns .add-employee-btn,
+.different-btns .download-btn,
+.different-btns .edit-btn {
+    border-radius: 3px;
+    margin: 0px 8px;
+    width: 200px;
+    background-color: rgb(119, 171, 83);
+    font-size: 1rem;
+    font-weight: bold;
+    display: none;
+    padding: 6px 0px;
+}
+
+/* Main Section */
+.main-section {
+    flex-direction: row;
+    align-items: stretch;
+}
+
+/* Important Section */
+.main-section > div:nth-child(1) {
+    width: 100%;
+    order: 1;
+}
+
+.main-container {
+    height: 70vh;
+    max-height: 780px;
+    overflow: hidden;
+}
+
+/* Main Tabs Links */
+.main-container section:nth-child(1),
+.main-container section:nth-child(1) ul {
+    height: 100%;
+    width: 13%;
+}
+
+.main-container section:nth-child(1) ul {
+    list-style-type: none;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+
+.main-container section:nth-child(1) ul li{
+    width: 100%;
+}
+
+.main-container section:nth-child(1) button {
+    width: 100%;
+    border: none;
+    gap: 5px;
+    background-color: transparent;
+    color: #777;
+}
+
+.main-container section:nth-child(1) i {
+    font-size: 2.4rem;
+    flex: 1 1 0;
+    color: inherit;
+}
+
+.main-container section:nth-child(1) button span{
+    font-size: 1.1rem;
+    flex: 2 1 0;
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: inherit;
+    pointer-events: none;
+}
+
+.active-main-tab {
+    color: #7aac59 !important;
+}
+
+/* Main Tabs Content */
+
+.main-container section:nth-child(2){
+    overflow-y: scroll;
+    width: 100%;
+}
+
+/* Company and Employees Content */
+.main-container table.main-table{
+    width: 100%;
+    max-height: 100%;
+}
+
+.table-head {
+    position: sticky;
+    top: 0%;
+}
+
+.main-container input[type="checkbox"]{
+    height: 25px;
+    width: 25px;
+    display: block;
+    margin: auto;
+}
+
+.main-container th {
+    text-align: left;
+    background-color: #7aac59;
+}
+
+.main-container th,
+.main-container td {
+    padding: 10px .98%;
+}
+
+.main-container tr:nth-child(odd){
+    background-color: rgba(204, 204, 204, 0.308);
+}
+
+.main-container .cell-w-5{
+    width: 5%;
+}
+
+.main-container .cell-w-10{
+    width: 10%;
+}
+
+.main-container .cell-w-15 {
+    width: 15%;
+}
+
+.main-container .cell-w-20 {
+    width: 20%;
+}
+
+.first-character {
+    padding: 7px 14px;
+    border-radius: 100%;
+    background-color: #7aac59;
+}
+
+.employee-detail-btn {
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+}
+
+/* css v2 starts*/
+
+/* Import Employee Section */
+main#upload {
+    width:100%;
+    height: 100%;
+    display: none;
+    transition: .3s;
+}
+
+.show-upload-modal{
+    display: block !important;
+}
+
+#upload h3{
+    font-size: 1.3rem;
+    font-weight:400;
+    margin: 20px 30px;
+}
+
+.nav {
+    width: 80%;
+    margin: 0 auto 50px;
+}
+
+.nav ul{
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.nav ul li:nth-child(1),
+.nav ul li:nth-child(3),
+.nav ul li:nth-child(5){
+    text-align: center;
+    width: max-content;
+    font-size: 1.3rem;
+    position: relative;
+    top: 0%;
+}
+
+.nav ul li:nth-child(1) div:nth-child(1),
+.nav ul li:nth-child(3) div:nth-child(1),
+.nav ul li:nth-child(5) div:nth-child(1){
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    border-radius: 100%;
+    line-height: 45px;
+    margin: 0 auto 10px;
+    background-color: #aaaaaa;
+}
+
+.nav ul li:nth-child(1) div:nth-child(2),
+.nav ul li:nth-child(3) div:nth-child(2),
+.nav ul li:nth-child(5) div:nth-child(2){
+    position: absolute;
+    top: 100%;
+    width: max-content;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bg-green{
+    background-color: #7aac59 !important;
+}
+
+/* Progressive Bar */
+.progressive-bar {
+    flex: 1;
+    background-color: #77777775;
+    border-radius: 10%;
+}
+
+.progressive-bar div{
+    background-color: #7aac59;
+    width: 0%;
+    padding: 3px 0px;
+}
+
+/* Hidding Section */
+.hide{
+    display: none !important;
+}
+
+/* Import1 */
+
+#import1 {
+    width: 100%;
+}
+
+.fileTakerMain{
+    width: 40%;
+    margin: 20px auto;
+}
+
+.fileTakerMain label div{
+    cursor: pointer;
+}
+
+.fileTaker{
+    width: 100%;
+    border: 5px dashed #4b494971;
+    border-radius:25px;
+    padding: 20px;
+    text-align:center;
+}
+
+.fileTaker i{
+    font-size: 3em;
+}
+
+.fileTaker p{
+    font-size: 2rem;
+    margin: 20px auto;
+    color:#858585;
+    background-color: g;
+}
+
+.fileTaker h6{
+    font-size: 1.5rem;
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.fileTaker button{
+    margin: 10px auto;
+    background-color: #7aac59;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.fileTaker input{
+    display: none;
+}
+
+
+#import1 > p {
+    font-size: 18px;
+    line-height: 2;
+    padding: 0px 60px;
+    margin-bottom: 10px;
+}
+
+/* Import2 */
+#import2 {
+    margin: 20px auto;
+    width: 85%;
+}
+
+.importOptionsList > ul{
+    list-style-type:none;
+    padding: 40px 0px 100px 0px;
+}
+
+.importOptionsList>ul>li{
+    margin-bottom:15px;
+}
+
+.importOptionsList>ul>li span{
+    font-weight:bold;
+    color:#858585;
+    margin-right:20px;
+    width: 150px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.importOptionsList >ul >li select{
+    padding:10px;
+    width:260px;
+    font-weight: bold;
+}
+
+.importOptionsList > ul> li:last-child p{
+    display: inline-block;
+    flex: 1;
+}
+
+.importOptionsList > ul> li:last-child input{
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 0px 18px;
+}
+
+/* Import3 */
+.new-table>table{
+    margin: 30px auto;
+    width: 97%;
+    border-radius: 4px;
+}
+
+.new-table > table > tbody > tr:first-child {
+    background-color:#7aac59 !important;
+    color:#fff;
+    font-weight:400;
+    font-size: 1.2rem;
+}
+
+.new-table>table td{
+    width: 33.33%;
+    text-align:left;
+    padding: 30px 15px;
+}
+
+.new-table>table td select{
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.show{
+    display: block !important;
+}
+
+/* Billing Content */
+#Billing .bill-table-1,
+#Billing .bill-table-2{
+    width:99.5%;
+    min-width: 1200px;
+}
+
+/* Bill Table 1 */
+#Billing .bill-table-1 > thead{
+    color:#fff;
+}
+
+#Billing .bill-table-1 > thead>tr th{
+    padding: 10px;
+    width:90px;
+    text-align:right;
+    font-size:11px;
+}
+
+#Billing .bill-table-1 > tbody tr td{
+    text-align:right;
+    width: auto;
+    padding: 5px 3px;
+    font-size: 13px;
+}
+
+#Billing .bill-table-1 > tbody tr{
+    background-color: #fff;
+}
+
+.below-tbody tr{
+    background-color:#efefef !important;
+}
+
+.below-tbody tr:nth-child(1){
+    border-top: 2px solid #000;
+}
+
+
+/* Bill Table 2 */
+.bill-table-2,
+.bill-table-2 td {
+    border: 1px solid #333;
+}
+
+.bill-table-2 td {
+    width: 120px;
+    height: 40px;
+    background-color: #fff;
+}
+
+.import-employee-decision-button {
+    gap: 15px;
+}
+
+.import-employee-decision-button button {
+    width: 200px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Resources Content */
+#Resources div{
+    padding: 5px 10px;
+    flex-wrap: wrap;
+}
+
+#Resources figure {
+    width: 25%;
+    padding: 15px 10px;
+}
+
+#Resources figure img {
+    aspect-ratio: 457 / 305;
+}
+
+#Resources figure h4 {
+    font-size: 1rem;
+    padding: 15px 0px;
+}
+
+#Resources figure p {
+    text-align: justify;
+}
+
+/* Change Page Section */
+.change-page {
+    padding: 10px 30px;
+    justify-content: right;
+}
+
+.change-page > div {
+    width: 92%;
+    justify-content: space-between;
+}
+
+.change-page > div > div:nth-child(1) button,
+.change-page > div > div:nth-child(1) p {
+    margin: 2px 10px;
+    font-size: 1.1rem;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.page-no {
+    border: 1px solid rgba(0, 0, 0, 0.527);
+    padding: 0px 20px;
+    margin: 0px 20px;
+}
+
+.no-pages {
+    padding: 0px 7px;
+}
+
+.change-page > div > div:nth-child(2) {
+    margin: 2px 10px;
+    font-size: 1.1rem;
+    padding: 10px;
+    background-color: transparent;
+}
+
+/* Side Section on Click */
+.side-section {
+    width: 0%;
+    order: 2;
+    overflow: hidden;
+    transition: all 100ms linear;
+    padding-top: 50px;
+}
+
+.side-section-active {
+    width: 260px;
+}
+
+.side-section > div{
+    flex-direction: column;
+}
+
+.company-tab-btn,
+.news-letter-tab-btn,
+.employee-tab-btn {
+    display: none;
+}
+
+.company-tab-btn .import-file,
+.company-tab-btn .export-file,
+.employee-tab-btn .import-file,
+.employee-tab-btn .export-file,
+.news-letter-tab-btn .import-file {
+    font-size: 1rem;
+    margin: 10px 0px;
+    padding: 10px 2px;
+    width: 200px;
+    border: 4px;
+}
+
+/* Add and Remove Buttons */
+.add-remove-carrier-btn,
+.add-remove-beneficiary-btn,
+.add-remove-contingent-btn,
+.add-remove-dependent-information-btn {
+    margin: 20px auto;
+    padding: 30px 0px 10px !important;
+    border-top: 3px solid #ccc;
+    gap: 20px;
+}
+
+.add-remove-carrier-btn button,
+.add-remove-beneficiary-btn button,
+.add-remove-contingent-btn button,
+.add-remove-dependent-information-btn button {
+    width: 250px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+}
+
+.add-remove-carrier-btn button:nth-child(1),
+.add-remove-beneficiary-btn button:nth-child(1),
+.add-remove-contingent-btn button:nth-child(1),
+.add-remove-dependent-information-btn button:nth-child(1){
+    color: #777;
+}
+
+/* Modals */
+.add-company-modal,
+.add-employee-modal,
+.employee-detail-modal {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(204, 204, 204, 0.432);
+    transform: translateX(100%);
+    transition: all 150ms linear;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.active-modal {
+    transform: translate(0%); 
+}
+
+.add-company-form,
+.add-employee-form,
+.employee-detail-form {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 80%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    z-index: 10;
+}
+
+.add-company-form .company-form-decision-button,
+.employee-detail-form .employee-detail-decision-button,
+.add-employee-form .employee-form-decision-button{
+    justify-content: right;
+    gap: 30px;
+    padding: 0px 20px;
+}
+
+.company-form-decision-button button,
+.employee-form-decision-button button,
+.employee-detail-decision-button button {
+    width: 200px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Add Company Form */
+.add-company-form .company-form-header {
+    padding: 30px 26px;
+    font-size: 1.2rem;
+}
+
+/* Policy Section And Plan Administrator */
+.poliy-holder-section .panel div.flex,
+.plan-administrator-section .panel div.flex{
+    padding: 5px 0px;
+    width: 95%;
+}
+
+.poliy-holder-section .panel div.flex div,
+.plan-administrator-section .panel div.flex div{
+    width: 50%;
+    padding: 5px 0px;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.poliy-holder-section .panel div.flex label,
+.plan-administrator-section .panel div.flex label{
+    flex: 1;
+    text-align: right;
+    font-size: 1rem;
+    display: block;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.poliy-holder-section .panel div.flex input,
+.poliy-holder-section .panel div.flex select,
+.plan-administrator-section .panel div.flex input,
+.plan-administrator-section .panel div.flex select{
+    width: 70%;
+    display: block;
+    font-size: 1rem;
+    color: #777;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #777;
+    outline: none;
+}
+
+/* Policy Holder Section */
+.send-email-btn {
+    padding: 10px 70px;
+    font-size: 1rem;
+    margin: 20px auto;
+    background-color: #7aac59;
+    font-weight: bold;
+    border-radius: 4px;
+    display: none;
+}
+
+.s-e-btn-active {
+    display: block;
+}
+
+#policy > .welcome-2{
+    width: 200px;
+    margin: auto;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Plan Administrator Section */
+.email-btn {
+    padding: 10px 70px;
+    font-size: 1rem;
+    margin: 20px auto;
+    background-color: #7aac59;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.plan-administrator-section .plan-administrator-btn{
+    border-top: 4px solid #ccc;
+    padding: 30px !important;
+    display: flex;
+    gap: 30px;
+    margin: auto;
+}
+
+.plan-administrator-section .plan-administrator-btn button{
+    padding: 10px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+}
+
+.plan-administrator-section .plan-administrator-btn button:nth-child(1){
+    color: #636363;
+}
+
+.plan-administrator-section .plan-administrator-btn button:nth-child(2){
+    background-color: #ff1717c4;
+
+}
+
+/* Employee Information */
+.employee-information-section .panel > div:nth-child(1){
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.employee-information-section .panel > div:nth-child(1) > div{
+    width: 33%;
+    flex-direction: column;
+}
+
+.employee-information-section .panel > div:nth-child(1) > div label,
+.employee-information-section .panel > div:nth-child(1) > div input{
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.employee-information-section .panel > div:nth-child(1) > div label {
+    padding: 5px 0px;
+}
+
+.employee-information-section .panel > div:nth-child(1) > div input{
+    padding: 5px 10px;
+    border: 1px solid #777;
+}
+
+/* Benefits and Employer Contributions Section */
+.benef-and-contri-section {
+    padding: 10px;
+    gap: 10px;
+}
+
+.benef-and-contri-section table {
+    width: 70%;
+}
+
+.benef-and-contri-section table td{
+    width: 20%;
+    text-align: center;
+}
+
+.benef-and-contri-section table td:nth-child(2){
+    width: 60%;
+    text-align: left;
+}
+
+.checkbox-field {
+    height: 20px;
+    width: 20px;
+}
+
+.text-field {
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+}
+
+/* Waiting Period */
+.waiting-period {
+    padding: 3px;
+}
+
+.waiting-period div:nth-child(1){
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.waiting-period div:nth-child(2){
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.waiting-period > div:nth-child(2) input,
+.waiting-period > div:nth-child(2) select{
+    width: 40%;
+    color: #777;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.add-remove-class-btn {
+    margin-top: 30px;
+}
+
+.add-remove-class-btn .btn {
+    width: 80%;
+    padding: 10px;
+    margin: 15px auto;
+    font-size: 1rem;
+    border-radius: 3px;
+}
+
+.add-remove-class-btn .btn:nth-child(1){
+    color: #636363;
+}
+
+/* Add and Remove Division */
+.division-buttons {
+    margin-top: 10px;
+    border-top: 3px solid #ccc;
+    padding: 20px 20px 100px;
+    gap: 20px;
+}
+
+.division-buttons .btn {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 3px;
+    width: 270px;
+}
+
+/* Unit Rates Section */
+
+/* Carriers Section */
+.carriers-section .panel div{
+    padding: 2px 0px;
+}
+
+.carriers-section .panel div > div:nth-child(1){
+    width: 10%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.carriers-section .panel div select{
+    padding: 5px;
+    border: none;
+    outline: none;
+    color: #777;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.carriers-section .panel div > div:nth-child(1) input[type="checkbox"]{
+    height: 20px;
+    width: 20px;
+    background-color: darksalmon;
+    border: 1px solid black;
+}
+
+/* Unit Rate Section */
+.unit-rate-section h5 {
+    color: #777;
+    font-size: 1rem;
+    border-bottom: 3px solid #ccc;
+    padding: 10px 0px;
+    margin: 15px 0px;
+}
+.unit-rate-section .panel > div{
+    padding: 0px 20px;
+    font-size: 1rem;
+    width: 50%;
+}
+
+.unit-rate-section .panel > div > div:nth-child(1){
+    width: 60%;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.unit-rate-section .panel > div > div:nth-child(2),
+.unit-rate-section .panel > div > input{
+    width: 40%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #777;
+    border-color: rgba(255, 0, 0, 0.705);
+}
+
+/* Schedule Section */
+.schedule-section h5 {
+    color: #777;
+    font-size: 1rem;
+    border-bottom: 3px solid #ccc;
+    padding: 10px 0px;
+    margin: 15px 0px;
+}
+
+/* Schedule Table 1 , 2 and 3 */
+.schedule-section .schedule-table-1,
+.schedule-section .schedule-table-2,
+.schedule-section .schedule-table-3{
+    margin: 10px 15px;
+    font-size: 1rem;
+}
+
+/* Schedule Table 1 */
+.schedule-section .schedule-table-1 {
+    width: 70%;
+}
+
+.schedule-section .schedule-table-1 input,
+.schedule-section .schedule-table-1 select,
+.schedule-section .schedule-table-2 input,
+.schedule-section .schedule-table-2 select,
+.schedule-section .schedule-table-3 input,
+.schedule-section .schedule-table-3 select {
+    width: 100%;
+    padding: 5px;
+    font-size: 1rem;
+    color: #777;
+}
+
+.schedule-section .schedule-table-1 td:nth-child(1) {
+    width: 45%;
+}
+
+.schedule-section .schedule-table-1 td:nth-child(2){
+    width: 35%;
+}
+
+.schedule-section .schedule-table-1 td:nth-child(3),
+.schedule-section .schedule-table-1 td:nth-child(4) {
+    width: 10%;
+    text-align: center;
+}
+
+.schedule-section .schedule-table-1 select {
+    padding: 9px 2px;
+}
+
+/* Schedule Table 2 and 3 */
+.schedule-section .schedule-table-2,
+.schedule-section .schedule-table-3{
+    width: 97%;
+    overflow-x: scroll;
+}
+
+.schedule-section .schedule-table-2 table,
+.schedule-section .schedule-table-3 table{
+    width: 100%;
+    min-width: 700px;
+}
+
+.schedule-section .schedule-table-2 td:nth-child(1),
+.schedule-section .schedule-table-3 td:nth-child(1){
+    width: 25%;
+}
+
+.schedule-section .schedule-table-2 td:nth-child(2),
+.schedule-section .schedule-table-3 td:nth-child(2){
+    width: 15%;
+}
+
+.schedule-section .schedule-table-2 td:nth-child(3),
+.schedule-section .schedule-table-2 td:nth-child(4),
+.schedule-section .schedule-table-2 td:nth-child(6),
+.schedule-section .schedule-table-2 td:nth-child(7),
+.schedule-section .schedule-table-2 td:nth-child(8),
+.schedule-section .schedule-table-3 td:nth-child(3),
+.schedule-section .schedule-table-3 td:nth-child(4),
+.schedule-section .schedule-table-3 td:nth-child(6),
+.schedule-section .schedule-table-3 td:nth-child(7),
+.schedule-section .schedule-table-3 td:nth-child(8){
+    width: 10%;
+}
+
+.schedule-section .schedule-table-2 td:nth-child(5),
+.schedule-section .schedule-table-2 td:nth-child(9),
+.schedule-section .schedule-table-3 td:nth-child(5),
+.schedule-section .schedule-table-3 td:nth-child(9){
+    width: 5%;
+}
+
+/*  Add New Employee */
+.add-employee-form .employee-form-header {
+    padding: 30px 26px;
+    font-size: 1.2rem;
+}
+
+/* Employee Detail */
+.employee-detail-form .employee-detail-form-header {
+    padding: 30px 26px;
+    font-size: 1.2rem;
+}
+
+.employee-detail-form .employee-detail-form-header .first-character {
+    padding: 20px 23px;
+}
+
+.close-detail-model {
+    position: absolute;
+    top: 130px;
+    left: -38px;
+    padding: 20px 10px;
+    font-size: 2.4rem;
+    background-color: #fff;
+    border: 1px solid #555;
+}
+
+.employee-detail-form .employee-detail-decision-button {
+    display: none;
+}
+
+.edit-action-section {
+    gap: 10px;
+}
+
+.edit-action-section button{
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.edit-action-section select{
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #f1f1f1;
+    border: none;
+    font-weight: bold;
+}
+
+/* Add New Employee and Employee Detail */
+.plan-sponsor-section .panel div.flex input,
+.plan-sponsor-section .panel div.flex select,
+.plan-member-information .panel > div.flex > div > input,
+.plan-member-information .panel > div.flex > div > select,
+.refusal-of-benefits .panel > div.flex > div > input,
+.refusal-of-benefits .panel > div.flex > div > select,
+.beneficiary-designations .panel > div.flex > div input,
+.beneficiary-designations .panel > div.flex > div label,
+.contingent-beneficiary-designation .panel > div.flex > div input,
+.contingent-beneficiary-designation .panel > div.flex > div label,
+.trustee-appointee .panel > div.flex > div input,
+.trustee-appointee .panel > div.flex > div label,
+.spousal-information-section > div.flex > div input,
+.spousal-information-section > div.flex > div label,
+.spousal-information-section > div.flex > div select,
+.dependent-information-section > div.flex > div input,
+.dependent-information-section > div.flex > div label,
+.dependent-information-section > div.flex > div select,
+.spaecial-style-1 select {
+    display: block;
+    font-size: 1rem;
+    color: #777;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+
+/* Plan Sponsor Section */
+.plan-sponsor-section .panel > div.flex{
+    padding: 5px 0px;
+    width: 95%;
+}
+
+.plan-sponsor-section .panel div.flex > div{
+    width: 35%;
+    padding: 5px 0px;
+    justify-content: space-between;
+}
+
+.plan-sponsor-section .panel div.flex > div:nth-child(1){
+    width: 30%;
+}
+
+.plan-sponsor-section .panel div.flex label{
+    width: 45%;
+    flex: 1;
+    text-align: right;
+    font-size: 1rem;
+    display: block;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.plan-sponsor-section .panel div.flex input,
+.plan-sponsor-section .panel div.flex select{
+    width: 55%;
+}
+
+.plan-sponsor-section .panel div.flex select {
+    width: 70%;
+}
+
+/* Plan Member Information */
+.plan-member-information .panel > div.flex{
+    padding: 5px 0px;
+    width: 95%;
+}
+
+.plan-member-information .panel > div.flex > div{
+    padding: 5px 0px;
+    width: 50%;
+    gap: 5px;
+}
+
+.plan-member-information .panel > div.flex > div > label{
+    width: 20%;
+    text-align: right;
+    font-size: 1rem;
+    display: block;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.plan-member-information .panel > div.flex > div > input,
+.plan-member-information .panel > div.flex > div > select{
+    width: 70%;
+}
+
+.plan-member-information .panel > div.flex:nth-child(2) > div:nth-child(1) > select{
+    width: 30%;
+}
+
+.plan-member-information .panel > div.flex:nth-child(4) > div > select{
+    width: 60%;
+}
+
+.plan-member-information .panel > div.flex:nth-child(5) > div > label{
+    width: 20%;
+}
+.plan-member-information .panel > div.flex:nth-child(5) > div > select{
+    width: 20%;
+}
+
+.plan-member-information .panel > div.flex:nth-child(6) > div > label{
+    width: 70%;
+}
+
+.plan-member-information .panel > div.flex:nth-child(6) > div > input{
+    width: 20%;
+}
+
+.plan-member-information .panel > div.flex:nth-child(7) > div{
+    width: 90%;
+}
+
+.plan-member-information .panel > div.flex:nth-child(7) > div > label{
+    width: 11%;
+}
+
+/* Refusal of Benefits */
+.refusal-of-benefits .panel > div.flex{
+    padding: 5px 0px;
+    width: 95%;
+}
+
+.refusal-of-benefits .panel > div.flex > div:nth-child(1){
+    width: 70%;
+    padding: 5px 0px;
+    gap: 5px;
+}
+
+.refusal-of-benefits .panel > div.flex > div:nth-child(2){
+    width: 30%;
+    padding: 5px 0px;
+    gap: 5px;
+}
+
+.refusal-of-benefits .panel > div.flex > div:nth-child(1) > label,
+.refusal-of-benefits .panel > div.flex > div:nth-child(2) > label{
+    width: 50%;
+    text-align: right;
+    font-size: 1rem;
+    display: block;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+.refusal-of-benefits .panel > div.flex > div:nth-child(2) > label{
+    width: 40%;
+}
+
+.refusal-of-benefits .panel > div.flex > div > input,
+.refusal-of-benefits .panel > div.flex > div > select{
+    width: 70%;
+}
+
+.refusal-of-benefits .panel > div.flex > div:nth-child(2) > input{
+    width: 30%;
+}
+
+/* Beneficiary Designations  */
+/* Contingent Beneficiary Designation */
+/* Trustee Appointee */
+.beneficiary-designations .panel > div.flex,
+.contingent-beneficiary-designation .panel > div.flex,
+.trustee-appointee .panel > div.flex{
+    padding: 5px 0px;
+    width: 95%;
+}
+
+.beneficiary-designations .panel > div.flex > div,
+.contingent-beneficiary-designation .panel > div.flex > div,
+.trustee-appointee .panel > div.flex > div{
+    width: 50%;
+    padding: 5px 0px;
+    gap: 5px;
+}
+
+.beneficiary-designations .panel > div.flex > div input,
+.beneficiary-designations .panel > div.flex > div label,
+.contingent-beneficiary-designation .panel > div.flex > div input,
+.contingent-beneficiary-designation .panel > div.flex > div label,
+.trustee-appointee .panel > div.flex > div input,
+.trustee-appointee .panel > div.flex > div label{
+    width: 70%;
+}
+
+.beneficiary-designations .panel > div.flex > div label,
+.contingent-beneficiary-designation .panel > div.flex > div label,
+.trustee-appointee .panel > div.flex > div label{
+    width: 20%;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 10px;
+    border: none;
+}
+
+.beneficiary-designations .panel > div.flex:nth-child(2) > div:nth-child(2) label,
+.contingent-beneficiary-designation .panel > div.flex:nth-child(2) > div:nth-child(2) label,
+.trustee-appointee .panel > div.flex:nth-child(2) > div:nth-child(2) label{
+    width: 40%;
+}
+
+.beneficiary-designations .panel > div.flex:nth-child(2) > div:nth-child(2) input,
+.contingent-beneficiary-designation .panel > div.flex:nth-child(2) > div:nth-child(2) input,
+.trustee-appointee .panel > div.flex:nth-child(2) > div:nth-child(2) input{
+    width: 30%;
+}
+
+/* Dependent Information */
+.dependent-information .panel > div.flex{
+    padding: 5px 0px;
+    width: 95%;
+    margin: auto;
+}
+
+.spousal-information-section > div.flex > div,
+.dependent-information-section > div.flex > div{
+    width: 50%;
+    padding: 5px 0px;
+    gap: 5px;
+}
+
+.spousal-information-section h5,
+.dependent-information-section h5{
+    border-top: 3px solid #ccc;
+    padding: 15px 0px;
+    margin-bottom: 10px;
+    font: .9rem;
+}
+
+.spousal-information-section h5 {
+    border: none;
+}
+
+.spousal-information-section > div.flex > div input,
+.spousal-information-section > div.flex > div label,
+.spousal-information-section > div.flex > div select,
+.dependent-information-section > div.flex > div input,
+.dependent-information-section > div.flex > div label,
+.dependent-information-section > div.flex > div select{
+    width: 70%;
+}
+
+
+.spousal-information-section > div.flex > div label,
+.dependent-information-section > div.flex > div label{
+    width: 20%;
+    font-size: 1rem;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 10px;
+    border: none;
+}
+
+.spousal-information-section > div.flex > div select {
+    width: 30%;
+}
+
+.dependent-information-section > div.flex > div select {
+    width: 50%;
+}
+
+.spousal-information-section > div.flex:nth-child(3) > div:nth-child(2) input{
+    width: 30%;
+}
+
+.spaecial-style-1 {
+    padding: 10px;
+}
+
+.spaecial-style-1 div:nth-child(1) {
+    width: max-content !important;
+}
+
+.spaecial-style-1 > div:nth-child(1) label {
+    width: 100% !important;
+}
+
+.spaecial-style-1 > div:nth-child(2) label,
+.spaecial-style-1 > div:nth-child(2) select {
+    width: max-content !important;
+}
+
+.spaecial-style-2 div:nth-child(1){
+    width: 30% !important;
+    justify-content: space-evenly;
+}
+
+.spaecial-style-2 div:nth-child(2){
+    width: 40% !important;
+    justify-content: space-evenly;
+}
+
+.spaecial-style-2 div:nth-child(3){
+    width: 25% !important;
+    justify-content: space-evenly;
+}
+
+.spaecial-style-2 div label,
+.spaecial-style-2 div input {
+    width: 60% !important;
+}
+
+.spaecial-style-2 div label{
+    width: 30% !important;
+}
+
+.spaecial-style-2 div:nth-child(3) input {
+    width: 60% !important;
+}
+
+
+.add-remove-dependent-information-btn{
+    margin: 20px 0px !important;
+}
+
+/* Premiums Section and Employee Premiums Section */
+#premiums div,
+#employee-premiums div{
+    min-height: 70vh;
+    padding: 20px;
+    overflow-x: scroll;
+}
+
+#premiums table,
+#employee-premiums table {
+    width: 90%;
+    margin: auto;
+    min-width: 700px;
+}
+
+#premiums table td,
+#employee-premiums table td {
+    padding: 10px;
+}
+
+/* Tracking Section and Employee Tracking Section */
+#tracking div,
+#employee-tracking div{
+    width: 100%;
+    height: 100%;
+    min-height: 50vh;
+}
+
+#tracking table,
+#employee-tracking table{
+    width: 80%;
+    font-size: 1rem;
+}
+
+#tracking th,
+#employee-tracking th {
+    text-align: left;
+    padding: 10px 0px;
+    color: #333;
+}
+
+#tracking th,
+#tracking td,
+#employee-tracking th,
+#employee-tracking td {
+    width: 40%;
+    padding: 10px 0px;
+}
+
+#tracking td,
+#employee-tracking td {
+    padding-left: 15px;
+}
+
+.input-field {
+    pointer-events: none;
+    border: none;
+}
+
+.add-employee-form input,
+.add-employee-form select {
+    border: 1px solid #777 !important;
+}
+
+@media screen and (max-width: 1200px){
+    /* Main Tabs Links */
+    .main-container section:nth-child(1){
+        width: 8%;
+    }
+
+    .main-container section:nth-child(1) ul {
+        width: 100%;
+    }
+
+    .main-container section:nth-child(1) button span{
+        display: none;
+    }
+    
+}
+
+@media only screen and (max-width:1024px) {
+    /* Activity Section */
+    .activity-section > div {
+        width: 100%;
+    }
+
+    /* Main Section */
+    .main-section {
+        flex-direction: column;
+    }
+    
+    /* Important Section */
+    .main-section > div:nth-child(1) {
+        order: 2;
+    }
+
+    .main-container {
+        height: 80vh;
+        flex-direction: column;
+    }
+
+    /* Main Tabs Links */
+    .main-container section:nth-child(1),
+    .main-container section:nth-child(1) ul {
+        height: auto;
+        width: 100%;
+    }
+
+    .main-container section:nth-child(1) ul {
+        padding: 20px;
+        flex-direction: row;
+    }
+    
+    /* Company and Employees Content */
+    .main-container table.main-table{
+        min-width: 800px;
+    }
+
+    .main-container input[type="checkbox"]{
+        height: 20px;
+        width: 20px;
+    }
+
+    .main-container th,
+    .main-container td {
+        padding: 20px 0px;
+        text-align: center;
+    }
+
+    /* Change Page Section */
+    .change-page > div {
+        width: 100%;
+    }
+
+    /* Side Section on Click */
+    .side-section {
+        order: 1;
+        padding: 20px 0px;
+        height: auto;
+        display: none;
+        width: 100%;
+    }
+
+    .side-section-active {
+        display: block;
+    }
+
+    .side-section > div {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* Add Company From */
+    .add-company-form,
+    .add-employee-form,
+    .employee-detail-form {
+        width: 100%;
+    }
+        
+    .close-detail-model {
+        top: 30px;
+        left: 90% !important;
+        z-index: 1;
+        padding: 2px 10px;
+        font-size: 1.5rem;
+        background-color: rgba(235, 232, 232, 0.521);
+        border-radius: 100%;
+    }
+
+    .close-detail-model i{
+        display: none;
+    }
+
+    .close-detail-model::before{
+        content: "\00D7";
+        color: #777;
+    }
+
+}
+
+@media only screen and (max-width:950px) {
+    /* Different Buttons */
+    .different-btns select {
+        padding: 5px 0px;
+        margin-right: 3px;
+    }
+
+    .different-btns > div:nth-child(3) > div:nth-child(2) button{
+        width: 140px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    #Resources figure {
+        width: 33.33%;
+    }
+
+
+    /* Plan Sponsor Section */
+    .plan-sponsor-section .panel > div.flex{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .plan-sponsor-section .panel div.flex > div{
+        width: 70% !important;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .plan-sponsor-section .panel div.flex label{
+        width: 50%;
+        text-align: left;
+    }
+
+    .plan-sponsor-section .panel div.flex input,
+    .plan-sponsor-section .panel div.flex select{
+        flex: 1;
+    }
+
+    .plan-sponsor-section .panel input[type='checkbox']{
+        height: 20px;
+        width: 20px;
+    }
+    
+    /* Plan Member Information */
+    .plan-member-information .panel > div.flex{
+        width: 100%;
+        flex-direction: column;
+    }
+    .plan-member-information .panel > div.flex > div,
+    .plan-member-information .panel > div.flex:nth-child(7) > div{
+        width: 70%;
+    }
+    
+    .plan-member-information .panel > div.flex > div > label{
+        width: 40% !important;
+        text-align: left;
+    }
+    
+    .plan-member-information .panel > div.flex > div > input,
+    .plan-member-information .panel > div.flex > div > select{
+        width: auto;
+        flex: 1;
+    }
+  
+    /* Refusal of Benefits */
+    .refusal-of-benefits .panel > div.flex{
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .refusal-of-benefits .panel > div.flex > div:nth-child(1){
+        width: 70%;
+        gap: 5px;
+    }
+    
+    .refusal-of-benefits .panel > div.flex > div:nth-child(2){
+        width: 70%;
+    }
+    
+    .refusal-of-benefits .panel > div.flex > div:nth-child(1) > label,
+    .refusal-of-benefits .panel > div.flex > div:nth-child(2) > label{
+        width: 40%;
+        text-align: left;
+    }
+    
+    
+    .refusal-of-benefits .panel > div.flex > div > input,
+    .refusal-of-benefits .panel > div.flex > div > select{
+        flex: 1;
+    }
+    
+    /* Beneficiary Designations  */
+    /* Contingent Beneficiary Designation */
+    /* Trustee Appointee */
+    .beneficiary-designations .panel > div.flex,
+    .contingent-beneficiary-designation .panel > div.flex,
+    .trustee-appointee .panel > div.flex{
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .beneficiary-designations .panel > div.flex > div,
+    .contingent-beneficiary-designation .panel > div.flex > div,
+    .trustee-appointee .panel > div.flex > div{
+        width: 70%;
+    }
+
+    .beneficiary-designations .panel > div.flex > div label,
+    .contingent-beneficiary-designation .panel > div.flex > div label,
+    .trustee-appointee .panel > div.flex > div label{
+        width: 50%;
+        text-align: left;
+    }
+    
+    
+    .beneficiary-designations .panel > div.flex:nth-child(2) > div:nth-child(2) input,
+    .contingent-beneficiary-designation .panel > div.flex:nth-child(2) > div:nth-child(2) input,
+    .trustee-appointee .panel > div.flex:nth-child(2) > div:nth-child(2) input{
+        flex: 1;
+    }
+    
+    /* Dependent Information */
+    .dependent-information .panel > div.flex{
+        width: 100%;
+    }
+    
+    .spousal-information-section > div.flex,
+    .dependent-information-section > div.flex{
+        flex-direction: column;
+    }
+    
+    .spousal-information-section > div.flex > div,
+    .dependent-information-section > div.flex > div{
+        width: 70%;
+    }
+    
+    .spousal-information-section h5,
+    .dependent-information-section h5 {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+
+    .spousal-information-section > div.flex > div input,
+    .spousal-information-section > div.flex > div select,
+    .dependent-information-section > div.flex > div input,
+    .dependent-information-section > div.flex > div select{
+        width: auto;
+        flex: 1;
+    }
+    
+    .spousal-information-section > div.flex > div label,
+    .dependent-information-section > div.flex > div label{
+        width: 40%;
+        text-align: left;
+    }
+    
+    .spousal-information-section > div.flex > div select {
+        width: 30%;
+    }
+    
+    .dependent-information-section > div.flex > div select {
+        width: 100%;
+    }
+    
+    .spaecial-style-1 {
+        padding: 10px;
+        flex-direction: column;
+    }
+    
+    .spaecial-style-1 > div:nth-child(1) {
+        width: 70% !important;
+    }
+    
+    .spaecial-style-1 > div:nth-child(2) {
+        flex-direction: column;
+        width: 70% !important;
+    }
+    
+    .spaecial-style-1 > div:nth-child(2) div {
+        width: 100% !important;
+    }
+    
+    .spaecial-style-1 > div:nth-child(2) label {
+        width: 40% !important;
+    }
+
+    .spaecial-style-2 {
+        width: 70% !important;
+        margin: auto;
+    }
+    .spaecial-style-2 div:nth-child(1),
+    .spaecial-style-2 div:nth-child(2),
+    .spaecial-style-2 div:nth-child(3){
+        width: 100% !important;
+    }
+    
+    .spaecial-style-2 div label {
+        width: 40% !important;
+    }
+
+    .spaecial-style-2 div input,
+    .spaecial-style-2 div select {
+        flex: 1;
+    }
+
+    /* Premiums Section and Employee Premiums Section */
+    #premiums div,
+    #employee-premiums div{
+        min-height: 70vh;
+        padding: 20px;
+    }
+
+    #premiums table,
+    #employee-premiums table {
+        width: 90%;
+    }
+
+    #premiums table td,
+    #employee-premiums table td {
+        padding: 10px;
+    }
+
+    /* Tracking Section and Employee Tracking Section */
+    #tracking div,
+    #employee-tracking div{
+        width: 100%;
+        height: 100%;
+        min-height: 50vh;
+    }
+
+    #tracking table,
+    #employee-tracking table{
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    #tracking th,
+    #employee-tracking th {
+        text-align: left;
+        padding: 10px 0px;
+        color: #333;
+    }
+
+    #tracking th,
+    #tracking td,
+    #employee-tracking th,
+    #employee-tracking td {
+        width: 40%;
+        padding: 10px 0px;
+    }
+
+    #tracking td,
+    #employee-tracking td {
+        padding-left: 15px;
+    }
+
+    .input-field {
+        pointer-events: none;
+        border: none;
+    }
+
+    .add-employee-form input,
+    .add-employee-form select {
+        border: 1px solid #777 !important;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    /* Activity Section */
+    .activity-section > div {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Filter Fields */
+    .filter-fields {
+        order: 2;
+    }
+
+    /* Different Buttons */
+    
+    .different-btns {
+        order: 1;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .year-month-fields {
+        order: 3;
+    }
+
+    .different-btns > div:nth-child(2){
+        order: 1;
+    }
+
+    .different-btns > div:nth-child(3){
+        order: 2;
+    }
+
+
+    .different-btns > div:nth-child(3) > div:nth-child(2) button{
+        width: 200px;
+    }
+
+    /* Import Employee Section  */
+    .nav {
+        width: 85%;
+    }
+
+    .nav ul li:nth-child(1) div:nth-child(2),
+    .nav ul li:nth-child(3) div:nth-child(2),
+    .nav ul li:nth-child(5) div:nth-child(2){
+        font-size: 1.1rem;
+    }
+
+    /* Import1 */
+    .fileTakerMain{
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    .fileTaker i{
+        font-size: 2.7em;
+    }
+
+    /* Import2 */
+    #import2 {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .importOptionsList > ul{
+        list-style-type:none;
+        padding: 20px 0px 60px 0px;
+    }
+
+    /* Import3 */
+    .new-table > table > tbody > tr:first-child {
+        font-size: 1rem;
+    }
+
+    .new-table>table td{
+        padding: 30px 8px;
+
+    }
+
+    .new-table>table td select{
+        width: 140px;
+        font-size: .9rem;
+        text-overflow: ellipsis;
+    }
+
+    /* Change Page Section */
+    .change-page > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Add New Company */
+
+    /* Policy Holder Section and Plan Administrator Section  */
+    .poliy-holder-section .panel > div,
+    .plan-administrator-section .panel > div{
+        flex-direction: column;
+        width: 80% !important;
+        margin: auto;
+    }
+
+    .poliy-holder-section .panel > div > div,
+    .plan-administrator-section .panel > div > div {
+        width: 100% !important;
+    }
+
+    .poliy-holder-section .panel label,
+    .plan-administrator-section .panel label{
+        text-align: center !important;
+        width: 30% !important;
+    }
+
+    /* Plan Administrator Section */
+    .plan-administrator-section .plan-administrator-btn button{
+        padding: 10px 0px;
+        width: 200px;
+    }
+
+    .email-btn {
+        padding: 10px 0px;
+        width: 200px;
+    }
+
+    /* Employee Information */
+    .employee-information-section .panel > div:nth-child(1){
+        flex-direction: column;
+        margin: 10px 0px;
+    }
+
+    .employee-information-section .panel > div:nth-child(1) > div{
+        width: 80%;
+        flex-direction: row;
+    }
+
+    .benef-and-contri-section {
+        flex-direction: column;
+    }
+    
+    .benef-and-contri-section table {
+        width: 100%;
+    }
+
+    .benef-and-contri-section table tr:nth-child(1) td{
+        padding: 10px 0px;
+    }
+    
+    .benef-and-contri-section table td{
+        width: 30%;
+    }
+
+    .benef-and-contri-section table td:nth-child(1){
+        width: 10%;
+    }
+    
+    .benef-and-contri-section table td:nth-child(2){
+        width: 60%;
+    }
+    
+    /* Waiting Period */
+    .waiting-period {
+        padding: 0px;
+    }
+    
+    .add-remove-class-btn .btn {
+        width: 200px
+    }
+
+    .division-buttons {
+        flex-direction: column;
+    }
+
+    .division-buttons button{
+        width: 200px !important;
+    }
+
+    /* Unit Rates Section */
+    
+    /* Add and Remove Buttons */
+    .add-remove-carrier-btn,
+    .add-remove-beneficiary-btn,
+    .add-remove-contingent-btn,
+    .add-remove-dependent-information-btn {
+        flex-direction: column;
+    }
+
+    /* Unit Rate Section */
+    .unit-rate-section .panel > div {
+        width: 100%;
+    }
+
+    .schedule-section .schedule-table-1,
+    .schedule-section .schedule-table-2,
+    .schedule-section .schedule-table-3{
+        margin: 10px 0px;
+    }
+
+    /* Schedule Table 1 */
+    .schedule-section .schedule-table-1 {
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    .schedule-section .schedule-table-1 td:nth-child(1) {
+        width: 40%;
+    }
+
+    .schedule-section .schedule-table-1 td:nth-child(2){
+        width: 30%;
+    }
+
+    .schedule-section .schedule-table-1 td:nth-child(3),
+    .schedule-section .schedule-table-1 td:nth-child(4) {
+        width: 15%;
+    }
+
+    /* Schedule Table 2 and 3 */
+    .schedule-section .schedule-table-2,
+    .schedule-section .schedule-table-3{
+        width: 100% !important;
+        padding: 20px 0px;
+    }
+
+    .schedule-section .schedule-table-3 td:nth-child(3),
+    .schedule-section .schedule-table-3 td:nth-child(4),
+    .schedule-section .schedule-table-3 td:nth-child(6),
+    .schedule-section .schedule-table-3 td:nth-child(7),
+    .schedule-section .schedule-table-3 td:nth-child(8) {
+        width: 0%;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    /* Resources Content */
+    #Resources figure {
+        width: 50%;
+    }
+     
+}
+
+@media only screen and (max-width:600px){
+    header .logo img{
+        width: 190px;
+    }
+
+    header button {
+        padding: 10px;
+    }
+    
+    header button i {
+        font-size: 1.9rem;
+    }
+
+    /* Notification Section */
+    .red-circle {
+        top: 4px;
+        left: 22px;
+    }
+
+    .notification-box {
+        top: 60px;
+        right: -30px;
+        width: 300px;
+        z-index: 10;
+    }
+
+    .notification-box::before {
+        top: -38px;
+        right: 33px;
+    }
+
+    /* User Section */
+    .user {
+        position: relative;
+        top: 0px;
+    }
+
+    .user-box {
+        top: 50px;
+        right: 10px;
+        z-index: 1;
+    }
+
+    .user-box-active {
+        display: block;
+    }
+
+    /* Activity Section */
+    .activity-section {
+        width: 100%;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+    
+    .activity-section > div{
+        justify-content: space-between;
+        width: 92%;
+    }
+
+    /* Filter Fields */
+    .filter-fields {
+        order: 2;
+    }
+
+    .filter-fields select {
+        border: 1px solid #ccc;
+    }
+
+    /* Different Buttons */
+    .different-btns {
+        order: 1;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Main Tabs Links */
+    .main-container section:nth-child(1) i {
+        font-size: 1.8rem;
+    }
+
+    /* Import Employee Section */
+    .nav ul li:nth-child(1) div:nth-child(2),
+    .nav ul li:nth-child(3) div:nth-child(2),
+    .nav ul li:nth-child(5) div:nth-child(2){
+        font-size: .9rem;
+    }
+
+    /* Import1 */
+    .fileTakerMain{
+        width: 300px;
+        margin: 20px auto;
+    }
+
+    .fileTaker i{
+        font-size: 2.7em;
+    }
+
+    #import1 > p {
+        padding: 0px 20px;
+    }
+
+
+    /* Change Page Section */
+    .change-page {
+        padding: 10px 0px;
+        justify-content: center;
+    }
+
+    .change-page > div {
+        gap: 10px;
+    }
+
+    .change-page > div > div:nth-child(1) button,
+    .change-page > div > div:nth-child(1) p {
+        margin: 2px;
+        padding: 10px;
+    }
+
+    .change-page > div > div:nth-child(1) p {
+        padding: 10px 2px;
+    }
+
+    .page-no {
+        margin: 0px 7px;
+    }
+
+    .no-pages {
+        padding: 0px 7px;
+    }
+    
+    /* Employee Detail Section */
+    .employee-detail-form-header h3 {
+        padding: 20px 0px;
+    }
+
+    .edit-action-section {
+        position: absolute;
+        top: 100px;
+        right: 15px;
+    }
+
+    .close-detail-model {
+        top: 40px;
+        left: 85% !important;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    /* Import Employee Section  */
+    .nav {
+        width: 85%;
+    }
+
+    .import-employee-decision-button button {
+        width: 150px;
+    }
+
+    .nav ul li:nth-child(1) div:nth-child(2),
+    .nav ul li:nth-child(3) div:nth-child(2),
+    .nav ul li:nth-child(5) div:nth-child(2){
+        font-size: .8rem;
+    }
+    
+    #import2 {
+        margin: 20px auto;
+        width: 90%;
+    }
+    
+    .importOptionsList > ul{
+        list-style-type:none;
+        padding: 20px 0px 60px 0px;
+    }
+    
+    .importOptionsList > ul > li{
+        flex-direction: column;
+    }
+
+    .importOptionsList > ul > li span{
+        margin: 10px 0px;
+    }
+    
+    .importOptionsList > ul> li:last-child span{
+        text-align: left;
+        width: 95%;
+    }
+
+    /* Resources Content */
+    #Resources div{
+        padding: 5px 20px;
+    }
+    
+    #Resources figure {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+
+    /* Employee Information Section */
+    .employee-information-section .panel > div:nth-child(1) > div{
+        width: 98%;
+        margin: auto;
+    }
+
+    /* Schedule Table 2 and 3 */
+    .schedule-section .schedule-table-3 td:nth-child(1),
+    .schedule-section .schedule-table-3 td:nth-child(2){
+        width: 50%;
+    }
+
+    /* Plan Sponsor Section */
+    /* Plan Member Information */
+    /* Refusal of Benefits */
+    /* Beneficiary Designations  */
+    /* Contingent Beneficiary Designation */
+    /* Trustee Appointee */
+    /* Dependent Information */
+    .plan-sponsor-section .panel div.flex > div,
+    .plan-member-information .panel > div.flex > div,
+    .plan-member-information .panel > div.flex:nth-child(7) > div,
+    .beneficiary-designations .panel > div.flex > div,
+    .contingent-beneficiary-designation .panel > div.flex > div,
+    .trustee-appointee .panel > div.flex > div,
+    .spousal-information-section > div.flex > div,
+    .dependent-information-section > div.flex > div,
+    .spaecial-style-2
+    {
+        width: 100% !important;
+    }
+
+    .refusal-of-benefits .panel > div.flex > div:nth-child(1),
+    .refusal-of-benefits .panel > div.flex > div:nth-child(2){
+        width: 100%;
+    }
+    
+}

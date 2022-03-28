@@ -1,0 +1,281 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.2;
+    font-family: "Roboto";
+}
+
+/* Utilites */
+.main-heading {
+    font-size: 3rem;
+}
+
+
+.main-page {
+    position: relative;
+    top: 0%;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+.main-page>main{height: 80vh;display: flex;align-items: center;justify-content: center;}
+/* Header Section */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > div{
+    width: 50%;
+}
+
+div.logo {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+}
+
+header > div:nth-child(2) {
+    padding: 45px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header a {
+    display: block;
+    margin: 0px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main Section */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+form > .login {
+    letter-spacing: 1px;
+    border-bottom: 4px solid #7aac59;
+    color: #afabab;
+    margin-bottom: 2em;
+    padding: 10px 7px;
+    font-weight: 700;
+}
+
+.btn {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    padding: 12px 0px;
+    width: 350px;
+    background-color: #7aac59;
+    border: none;
+    margin: 20px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #71a84d;
+}
+
+.btn:active {
+    transform: scale(.98);
+}
+
+/* For Login Page */
+
+form p {
+    font-size: 1.2rem;
+    color: rgba(51, 51, 51, 0.74);
+}
+
+form p:nth-child(3) {
+    margin-bottom: 20px;
+}
+
+form a {
+    color: #70ad47;
+    text-decoration: none;
+}
+
+form input {
+    outline: none;
+    font-size: 1.3rem;
+    padding: 10px 2px;
+    width: 290px;
+    display: block;
+    margin: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+form button i {
+    margin: 0px 10px;
+}
+
+/* Wave and Circle  */
+
+svg {
+    width: 60%;
+    max-height: 300px;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    z-index: -1;
+}
+
+
+.circle-small {
+    position: absolute;
+    bottom: 10%;
+    right: 15%;
+    background-color: #70ad47;
+    border-radius: 100%;
+    padding: 14px;
+    z-index: -1;
+}
+
+.inner-circle-small {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.circle-medium {
+    position: absolute;
+    bottom: 26%;
+    right: 9%;
+    background-color: transparent;
+    border-radius: 100%;
+    z-index: -5;
+    width: 75px;
+    height: 75px;
+    border: 18px solid #7aac59;
+}
+
+.inner-circle-medium {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.circle-large {
+    position: absolute;
+    right: -160px;
+    bottom: -200px;
+    background-color: #e2eeda;
+    border-radius: 100%;
+    padding: 120px;
+    z-index: -10;
+}
+
+.inner-circle-large {
+    width: 230px;
+    height: 230px;
+    background-color: white;
+    border-radius: 100%;
+}
+.quote1>ul{list-style-type: none;}
+    .quote1>ul>li{display: inline-block;vertical-align: middle;}
+    .quote1>ul>li:last-child{margin-left: 40px;}
+
+@media screen and (min-width: 1280px) {
+    .circle-large {
+        right: -185px;
+        bottom: -293px;
+    }
+    
+    .inner-circle-large {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .circle-large {
+        right: -160px;
+        bottom: -200px;
+    }
+    
+    .inner-circle-large {
+        width: 230px;
+        height: 230px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    svg {
+        width: 90%;
+    }
+    
+    .circle-small {
+        bottom: 4%;
+        right: 25%;
+    }
+
+    .inner-circle-small {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 100%;
+    }
+
+    .circle-medium {
+        bottom: 14%;
+        right: 10%;
+    }
+
+    .inner-circle-medium {
+        width: 25px;
+        height: 25px;
+    }
+
+    .circle-large {
+        right: -160px;
+        bottom: -200px;
+    }
+    
+    .inner-circle-large {
+        width: 130px;
+        height: 130px;
+    }
+    
+}
+
+@media screen and (max-width: 630px) {
+    header > div:nth-child(2) {
+        padding: 45px 4%;
+    }
+
+    svg {
+        width: 130%;
+        max-height: 500px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header > div:nth-child(2) {
+        padding: 45px 0%;
+    }
+
+    svg {
+        width: 150%;
+        max-height: 500px;
+    }
+}
